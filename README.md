@@ -13,9 +13,19 @@ The architecture is composed of:
 - Infrastructure provisioned using **Terraform**
 - Full source control and automation via **GitHub**
 
+## Architecture
 
+The solution follows a layered architecture:
 
-## 🧩 Architecture Diagram (Logical View)
+- **Frontend**: Azure Static Web Apps
+- **Backend**: FastAPI containerized application running on AKS
+- **Database**: Azure Database for MySQL
+- **Storage**: Azure Blob Storage
+- **Networking**: Virtual Network with isolated subnets
+- **IaC**: Terraform
+- **CI/CD**: GitHub Actions
+
+## Architecture Diagram (Logical View)
 ┌──────────────────────────────┐
 │ Azure Static Web Apps (HTTPS)│
 │ - HTML / JS Frontend │
