@@ -26,32 +26,8 @@ The solution follows a layered architecture:
 - **CI/CD**: GitHub Actions
 
 ## Architecture Diagram (Logical View)
-┌──────────────────────────────┐
-│ Azure Static Web Apps (HTTPS)│
-│ - HTML / JS Frontend │
-└───────────────┬──────────────┘
-│
-┌───────────────▼──────────────┐
-│ Azure Kubernetes Service │
-│ (AKS) │
-│ │
-│ ┌────────────────────────┐ │
-│ │ FastAPI Backend Pod │ │
-│ │ - REST API │ │
-│ │ - File Upload/Download │ │
-│ └───────────┬────────────┘ │
-│ │ │
-│ ┌───────▼────────┐ │
-│ │ MySQL Flexible │ │
-│ │ Server │ │
-│ └────────────────┘ │
-│ │ │
-│ ┌───────▼────────┐ │
-│ │ Blob Storage │ │
-│ │ (objects) │ │
-│ └────────────────┘ │
-└──────────────────────────────┘
 
+![Architecture Diagram](docs/architecture-diagram.png)
 
 > **Note**: In a production-grade deployment, the backend would be exposed through an HTTPS Ingress Controller with TLS termination, enabling secure frontend-to-backend communication.
 
