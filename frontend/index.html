@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Native Azure Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>☁️ Cloud Native Azure Demo</h1>
+
+  <section>
+    <h2>Backend health</h2>
+    <button onclick="checkHealth()">Check health</button>
+    <pre id="healthOutput"></pre>
+  </section>
+
+  <section>
+    <h2>Items from MySQL</h2>
+    <button onclick="loadItems()">Load items</button>
+    <ul id="itemsList"></ul>
+  </section>
+
+  <section>
+    <h2>Upload file to Blob Storage</h2>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload</button>
+    <pre id="uploadOutput"></pre>
+  </section>
+
+  <section>
+    <h2>Download file</h2>
+    <input type="text" id="downloadFileName" placeholder="filename.txt">
+    <button onclick="downloadFile()">Download</button>
+  </section>
+
+<script src="app.js"></script>
+</body>
+</html>
