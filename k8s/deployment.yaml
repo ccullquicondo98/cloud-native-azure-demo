@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: acrccullquicondo01.azurecr.io/cloud-backend:1.2
+        image: acrccullquicondo01.azurecr.io/cloud-backend:1.4
         ports:
         - containerPort: 8000
         envFrom:

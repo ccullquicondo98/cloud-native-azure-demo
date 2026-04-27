@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://172.193.116.67";
+const BACKEND_URL = "http://20.94.2.129";
 
 // Health check
 async function checkHealth() {
