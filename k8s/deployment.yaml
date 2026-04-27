@@ -21,5 +21,6 @@ spec:
         envFrom:
         - secretRef:
             name: mysql-secret
+        - secretRef:
             name: storage-secret
 

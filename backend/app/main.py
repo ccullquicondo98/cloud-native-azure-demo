@@ -23,6 +23,35 @@ def get_connection():
         database=DB_NAME
     )
 
+
+def init_db():
+    """
+    Crea la tabla items si no existe.
+    Esto permite que el backend arranque correctamente
+    incluso en despliegues nuevos.
+    """
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS items (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL
+        )
+    """)
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+
+@app.on_event("startup")
+def startup():
+    """
+    Se ejecuta automáticamente cuando inicia FastAPI.
+    """
+    init_db()
+
+
 # -------------------------
 # Configuración Blob Storage
 # -------------------------
