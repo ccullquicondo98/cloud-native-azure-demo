@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a **cloud-native application on Microsoft Azure**, designed as part of a technical challenge for a Cloud Engineer role.  
+This project implements a **cloud-native application on Microsoft Azure**
 The solution follows modern cloud principles, leveraging managed services, container orchestration, Infrastructure as Code (IaC), and CI/CD automation.
 
 The architecture is composed of:
